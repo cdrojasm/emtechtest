@@ -1,6 +1,6 @@
 ---
 
-# Prueba tecnica Emtelco
+# Prueba tecnica ChatBot
 
 Este proyecto es una aplicación de chat con inteligencia artificial que demuestra la orquestación de múltiples servicios y la integración de un modelo de lenguaje para interacciones conversacionales.
 
