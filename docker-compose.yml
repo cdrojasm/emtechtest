@@ -1,0 +1,76 @@
+volumes:
+  emtelco_chatbot:
+    driver: local
+  vs_emtelco:
+    driver: local
+networks:
+  emtelco_chatbot:
+    driver: bridge
+services:
+  db:
+    image: postgres:15.2
+    container_name: ${DB_CONTAINER_NAME}
+    hostname: ${DB_HOST_NAME}
+    restart: always
+    volumes:
+      - emtelco_chatbot:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"
+    env_file:
+      - .envs/.postgres
+    networks:
+      - emtelco_chatbot
+  api:
+    build: ./api
+    container_name: ${API_CONTAINER_NAME}
+    hostname: ${API_HOST_NAME}
+    restart: always
+    volumes:
+      - ./api:/app/
+    ports:
+      - "${API_PORT}:8000"
+    depends_on:
+      - db
+    env_file:
+      - .envs/.api
+    networks:
+      - emtelco_chatbot
+  ui:
+    build: ./ui
+    container_name: ${UI_CONTAINER_NAME}
+    restart: always
+    volumes:
+      - ./ui:/app
+    ports:
+      - "${UI_PORT}:3000"
+    env_file:
+      - .envs/.ui
+    depends_on:
+      - api
+  vector_store:
+    hostname: ${VS_HOST_NAME}
+    container_name: ${VS_CONTAINER_NAME}
+    image: chromadb/chroma:latest
+    ports:
+      - ${VS_PORT}:8000
+    volumes:
+      - vs_emtelco:/data
+    restart: always
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+      - ANONYMIZED_TELEMETRY=FALSE
+    networks:
+      - emtelco_chatbot
+  doc_loader:
+    build: ./doc_loader
+    volumes:
+      - ./doc_loader/data:/app/data
+    env_file:
+      - .envs/.api
+    depends_on:
+      - api
+      - vector_store
+    networks:
+      - emtelco_chatbot
+  

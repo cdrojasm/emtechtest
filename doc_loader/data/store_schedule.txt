@@ -1,0 +1,21 @@
+#	Sucursal	Dirección	Horario de Atención
+1	Sucursal Centro	Av. Principal #123	L-D: 7:00 a.m. - 10:00 p.m.
+2	Sucursal Norte	Calle 100 #25-80	L-S: 8:00 a.m. - 9:00 p.m. / D: 8:00 a.m. - 6:00 p.m.
+3	Sucursal Sur	Carrera 45 #15-50	L-D: 7:00 a.m. - 10:00 p.m.
+4	Sucursal Occidente	Calle 80 #50-20	L-D: 8:00 a.m. - 9:00 p.m.
+5	Sucursal Oriente	Av. Las Palmas #70	L-V: 8:00 a.m. - 9:00 p.m. / S-D: 9:00 a.m. - 7:00 p.m.
+6	Sucursal Altavista	Transversal 20 #34-60	L-D: 9:00 a.m. - 9:00 p.m.
+7	Sucursal San Pedro	Calle 33 #12-11	L-S: 7:30 a.m. - 9:30 p.m. / D: 8:00 a.m. - 8:00 p.m.
+8	Sucursal La Playa	Av. Costera #105	L-D: 6:30 a.m. - 10:30 p.m.
+9	Sucursal El Prado	Carrera 5 #8-90	L-V: 8:00 a.m. - 8:00 p.m. / S-D: 9:00 a.m. - 6:00 p.m.
+10	Sucursal Vista Hermosa	Calle 67 #45-20	L-D: 7:00 a.m. - 10:00 p.m.
+11	Sucursal Universitaria	Av. Universitaria #50	L-V: 7:00 a.m. - 8:00 p.m. / S-D: 9:00 a.m. - 5:00 p.m.
+12	Sucursal Las Lomas	Calle 55 #11-40	L-D: 8:00 a.m. - 9:00 p.m.
+13	Sucursal El Bosque	Av. Central #300	L-D: 7:00 a.m. - 10:00 p.m.
+14	Sucursal Portal Sur	Carrera 70 #10-20	L-V: 8:00 a.m. - 8:00 p.m. / S-D: 9:00 a.m. - 6:00 p.m.
+15	Sucursal Santa Clara	Calle 42 #7-25	L-D: 9:00 a.m. - 9:00 p.m.
+16	Sucursal Industrial	Zona Industrial Calle 4 #60	L-V: 6:00 a.m. - 6:00 p.m. / S: 7:00 a.m. - 1:00 p.m.
+17	Sucursal Terminal	Terminal de Transportes, Módulo 2	L-D: 6:00 a.m. - 11:00 p.m.
+18	Sucursal El Lago	Av. Circunvalar #250	L-S: 7:00 a.m. - 9:00 p.m. / D: 8:00 a.m. - 7:00 p.m.
+19	Sucursal Country Club	Calle 84 #40-11	L-D: 8:00 a.m. - 9:00 p.m.
+20	Sucursal Monteverde	Carrera 22 #33-77	L-D: 7:00 a.m. - 10:00 p.m.
